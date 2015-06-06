@@ -2,7 +2,7 @@ class Api::MeetingsController < ApplicationController
   include ActionController::MimeResponds
 
   def index
-    meetings = Meeting.all
+    meetings = [Meeting.new("title1"), Meeting.new("title2")]
 
     calendar = Icalendar::Calendar.new
 

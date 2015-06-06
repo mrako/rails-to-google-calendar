@@ -1,3 +1,7 @@
-
-Meeting.create(title: "Esimerkkitapahtuma", start_time: Time.now, end_time: Time.now+8.hours, description: "Kuvaus esimerkkitapahtumalle")
-Meeting.create(title: "Toinen esimerkkitapahtuma", start_time: Time.now+1.day, end_time: Time.now+4.days, description: "Pidempi kuvaus esimerkkitapahtumalle")
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)

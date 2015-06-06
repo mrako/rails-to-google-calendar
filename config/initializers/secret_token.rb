@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-GoogleCalendar::Application.config.secret_token = '5f54019a74ea06beab985854502098225affff247b1a8e648845db537afcca8086ebcc29afb8485707b46b4a85025963cda01e914ac975f2bf150a6cd965434c'
+GoogleCalendar::Application.config.secret_token = '1965d5ace8674704bba1039f62dae8bcf10fc54001eb5400409e342c5d7a188beb91331e979b269e918af807f4a4f743416ef7948d77af78321a86342fe7492f'

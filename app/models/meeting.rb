@@ -1,11 +1,12 @@
-class Meeting < ActiveRecord::Base
-  attr_accessible :description, :end_time, :location, :start_time, :title
-  validates :start_time,  presence: true
-  validates :end_time,    presence: true
-  validates :title, presence: true
+class Meeting
+  attr_accessor :title, :start_time, :end_time, :description
 
-  PUBLIC_URL = "http://localhost:3000/"
-
+  def initialize(title, start_time=Time.now, end_time=(Time.now+8.hours), description=nil)
+    self.title = title
+    self.start_time = start_time
+    self.end_time = end_time
+    self.description = description
+  end
 
   def to_ics
     event = Icalendar::Event.new
