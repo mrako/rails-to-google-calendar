@@ -1,4 +1,4 @@
-class Meeting
+class Event
   attr_accessor :title, :start_time, :end_time, :location, :description
 
   def initialize(title, start_time=Time.now, end_time=(Time.now+8.hours), location=nil, description=nil)
@@ -19,7 +19,7 @@ class Meeting
     event.description = self.description
     event.ip_class    = "PRIVATE"
 
-    event.uid = event.url = "https://trail-google-calendar.herokuapp.com/api/meetings/#{self.title}"
+    event.uid = event.url = "https://trail-google-calendar.herokuapp.com/api/events/#{self.title}"
 
     event
   end
