@@ -18,7 +18,7 @@ class Event
     event.summary     = self.title
     event.location    = self.location
     event.description = self.description
-    event.ip_class    = "PRIVATE"
+    event.ip_class    = "PUBLIC"
 
     event.uid = self.id
     event.url = "https://trail-google-calendar.herokuapp.com/api/events/#{self.id}"
