@@ -1,0 +1,1 @@
+Meeting.create(title: "Esimerkkitapahtuma", start_time: Time.now, end_time: Time.now+8.hours, description: "Kuvaus esimerkkitapahtumalle"
