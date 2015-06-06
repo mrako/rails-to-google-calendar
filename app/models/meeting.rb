@@ -19,7 +19,7 @@ class Meeting
     event.description = self.description
     event.ip_class    = "PRIVATE"
 
-    event.uid = event.url = "https://trail-google-calendar.herokuapp.com/api/meetings/#{self.id}"
+    event.uid = event.url = "https://trail-google-calendar.herokuapp.com/api/meetings/#{self.title}"
 
     event
   end

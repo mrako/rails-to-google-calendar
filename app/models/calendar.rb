@@ -27,7 +27,7 @@ private
 
   def add_events(events)
     events.each do |event|
-      self.calendar.add event.to_ics
+      self.calendar.add_event(event.to_ics)
     end
   end
 
