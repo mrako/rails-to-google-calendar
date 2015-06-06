@@ -7,7 +7,7 @@ class Api::MeetingsController < ApplicationController
 
     meetings = [Meeting.new("First reservation (less than 8 hours)", date1, date1+7.hours, "The fake event location", "Description of the reservation"), Meeting.new("title2", date2, date2+3.days)]
 
-    calendar = Calendar.new
+    calendar = Calendar.new(meetings)
 
     respond_to do |format|
       format.ics { render text: calendar.to_ical }
