@@ -1,7 +1,8 @@
 class Event
-  attr_accessor :title, :start_time, :end_time, :location, :description
+  attr_accessor :id, :title, :start_time, :end_time, :location, :description
 
   def initialize(title, start_time=Time.now, end_time=(Time.now+8.hours), location=nil, description=nil)
+    self.id = UUID.generate
     self.title = title
     self.start_time = start_time
     self.end_time = end_time
@@ -19,7 +20,8 @@ class Event
     event.description = self.description
     event.ip_class    = "PRIVATE"
 
-    event.uid = event.url = "https://trail-google-calendar.herokuapp.com/api/events/#{self.title}"
+    event.uid = self.id
+    event.url = "https://trail-google-calendar.herokuapp.com/api/events/#{self.id}"
 
     event
   end
